@@ -6,8 +6,7 @@ function sanitize(string $data): string
 
 function dd(mixed $data): void
 {
-    echo '
-<pre>';
+    echo '<pre>';
     print_r($data);
     echo '</pre>';
     die();

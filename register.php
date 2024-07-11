@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 // Steps to follow:
 // 1. Connect to the database
 // 2. Check if the form is submitted
@@ -30,16 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitize and Validate the Name Field
     if (empty($_POST['name'])) {
         $errors['name'] = 'Please provide a name';
-    } else {
+    } 
+    else {
         $name = sanitize($_POST['name']);
     }
 
     // Sanitize and Validate the Email Field
     if (empty($_POST['email'])) {
         $errors['email'] = 'Please provide an email address';
-    } else {
+    } 
+    else {
         $email = sanitize($_POST['email']);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
             $errors['email'] = 'Please provide a valid email address';
         }
     }
@@ -55,6 +59,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Hash The Password
         $password = password_hash($password, PASSWORD_DEFAULT);
     }
+
+
+
 
     if (empty($errors)) {
         // Prepare The SQL Statement
@@ -77,11 +84,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors['auth_error'] = 'An error occurred. Please try again';
         }
     }
+    
 }
 
 
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 
@@ -138,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div>
                                 <label for="name" class="block text-sm mb-2">Full Name</label>
                                 <div class="relative">
-                                    <input type="text" id="name" name="name" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" required aria-describedby="name-error" placeholder="Sultan Muhammad Alp Arslan" value="<?= $name; ?>">
+                                    <input type="text" id="name" name="name" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" required aria-describedby="name-error" placeholder="Your Full Name" value="<?= $name; ?>">
                                     <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                                         <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
