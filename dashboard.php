@@ -58,7 +58,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <div>
                                     <button @click="open = !open" type="button" class="flex rounded-full bg-white text-sm focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                         <span class="sr-only">Open user menu</span>
-                                        <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/61485238?v=4" alt="Al Nahian" />
+                                        <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/61485238?v=4" alt="Golam Rabbani Mithu" />
                                         </span>
                                     </button>
                                 </div>
@@ -99,10 +99,10 @@ if (!isset($_SESSION['user_id'])) {
                             </div>
                             <div class="ml-3">
                                 <div class="text-base font-medium text-white">
-                                    Al Nahian
+                                    Golam Rabbani Mithu
                                 </div>
                                 <div class="text-sm font-medium text-emerald-300">
-                                    admin@alnahian.com
+                                    golamrabbani3010@gmail.com
                                 </div>
                             </div>
                             <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-emerald-600 p-1 text-emerald-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600">
@@ -122,7 +122,7 @@ if (!isset($_SESSION['user_id'])) {
             <header class="py-10">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold tracking-tight text-white">
-                        Howdy, Al Nahian 👋
+                        Howdy, Golam Rabbani Mithu 👋
                     </h1>
                 </div>
             </header>
